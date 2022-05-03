@@ -64,8 +64,7 @@ if(clase == 1){
         }  
 
 }
-// arregloEnvios[+1] = costoServicioPostal;
-// tamanoMatriz +=1;
+
 return costoServicioPostal;
 }
 
@@ -81,7 +80,6 @@ if(distancia > 500){
 if(peso > 10){
     costoFedEx += 10.00;
 }
-// arregloEnvios[+1] = costoFedEx;
-// tamanoMatriz +=1;
+
 return costoFedEx;
 }

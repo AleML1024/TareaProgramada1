@@ -6,11 +6,10 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
  
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
- 
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon May  2 12:05:48 2022
+# Make data base, printed on Mon May  2 19:15:46 2022
 
 # Variables
 
@@ -41,7 +40,7 @@ GDMSESSION = cinnamon
 # default
 MAKE_VERSION := 4.2.1
 # makefile
-CURDIR := /home/alessandro/progra2_g06_2022_01/03-UnitTests
+CURDIR := /home/alessandro/TareaProgramada#1
 # makefile
 SHELL = /bin/sh
 # environment
@@ -103,7 +102,7 @@ XDG_SESSION_DESKTOP = cinnamon
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 1555
+GIO_LAUNCHED_DESKTOP_FILE_PID = 17672
 # automatic
 %F = $(notdir $%)
 # environment
@@ -111,7 +110,7 @@ DISPLAY = :0
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-PWD = /home/alessandro/progra2_g06_2022_01/03-UnitTests
+PWD = /home/alessandro/TareaProgramada#1
 # environment
 QT_QPA_PLATFORMTHEME = qt5ct
 # default
@@ -155,7 +154,7 @@ MAKECMDGOALS := all
 # environment
 SHLVL = 0
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-7043c1d7-a9de-485e-90e7-f71acf4e56c3.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-e19ea1a5-48c5-41e3-b955-65dd2e86782e.sock
 # environment
 XDG_SESSION_ID = c1
 # environment
@@ -225,9 +224,9 @@ LC_ADDRESS = es_CR.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 1555
+VSCODE_PID = 17672
 # variable set hash-table stats:
-# Load=106/1024=10%, Rehash=0, Collisions=9/135=7%
+# Load=106/1024=10%, Rehash=0, Collisions=9/136=7%
 
 # Pattern-specific Variable Values
 
@@ -235,7 +234,7 @@ VSCODE_PID = 1555
 
 # Directories
 
-# . (device 2053, inode 791089): 9 files, no impossibilities.
+# . (device 2053, inode 939195): 9 files, no impossibilities.
 
 # 9 files, no impossibilities in 1 directories.
 
@@ -269,11 +268,12 @@ all:
 # automatic
 # ? := 
 # variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/12=8%
+# Load=8/32=25%, Rehash=0, Collisions=1/13=8%
 #  recipe to execute (from 'Makefile', line 4):
 	mkdir -p bin
-	g++ $(FLAGS) src/calculadora.cpp -o bin/calculadora.o
-	
+	g++ $(FLAGS) src/tipoEnvio.cpp -o bin/tipoEnvio.o
+	g++ $(FLAGS) src/main.cpp -o bin/main.o
+	g++ -g -o bin/tipoEnvio bin/tipoEnvio.o bin/main.o
 
 # Not a target:
 .SUFFIXES:
@@ -284,21 +284,21 @@ all:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-04-24 20:23:58.674792
+#  Last modified 2022-05-02 19:15:24.150792324
+ 
 #  File has been updated.
+ 
 #  Successfully updated.
- 
 
- 
 test:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 8):
+#  recipe to execute (from 'Makefile', line 9):
 	mkdir -p bin
-	g++ $(FLAGS) tests/calculadora_tests.cpp -o bin/calculadora_tests.o
-	g++ $(FLAGS) src/calculadora.cpp -o bin/calculadora.o
-	g++ -g -o bin/tests bin/calculadora_tests.o bin/calculadora.o -lgtest -lgtest_main -lpthread 
+	g++ $(FLAGS) tests/tipoEnvioTests.cpp -o bin/tipoEnvioTests.o
+	g++ $(FLAGS) src/tipoEnvio.cpp -o bin/tipoEnvio.o
+	g++ -g -o bin/tests bin/tipoEnvioTests.o bin/tipoEnvio.o -lgtest -lgtest_main -lpthread 
 
 # Not a target:
 .DEFAULT:
@@ -310,7 +310,7 @@ clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 14):
+#  recipe to execute (from 'Makefile', line 15):
 	rm -Rf bin
 
 # files hash-table stats:
@@ -321,12 +321,12 @@ clean:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 16 / storage = 123 B / avg = 7 B
-# current buf: size = 8162 B / used = 123 B / count = 16 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 16 / storage = 118 B / avg = 7 B
+# current buf: size = 8162 B / used = 118 B / count = 16 / avg = 7 B
 
 # strcache performance: lookups = 25 / hit rate = 36%
 # hash-table stats:
 # Load=16/8192=0%, Rehash=0, Collisions=1/25=4%
-# Finished Make data base on Mon May  2 12:05:48 2022
+# Finished Make data base on Mon May  2 19:15:46 2022
 
  

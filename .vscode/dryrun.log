@@ -1,6 +1,13 @@
-make --dry-run --always-make --keep-going --print-directory
+make --dry-run --keep-going --print-directory
 make: Entering directory '/home/alessandro/TareaProgramada#1'
+ 
 mkdir -p bin
-g++ -g -c --std=c++17 src/calculadora.cpp -o bin/calculadora.o
+ 
+g++ -g -c --std=c++17 src/tipoEnvio.cpp -o bin/tipoEnvio.o
+ 
+g++ -g -c --std=c++17 src/main.cpp -o bin/main.o
+ 
+g++ -g -o bin/tipoEnvio bin/tipoEnvio.o bin/main.o
+ 
 make: Leaving directory '/home/alessandro/TareaProgramada#1'
  
