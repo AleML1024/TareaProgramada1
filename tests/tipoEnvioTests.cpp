@@ -15,7 +15,7 @@ namespace
         float esperada = 0.12;
 
         // Assert - valide los resultados
-        EXPECT_EQ(esperada, actual);
+        EXPECT_FLOAT_EQ(esperada, actual);
     }
 
       TEST(testTipoEnvio, testFedEx)
@@ -30,7 +30,7 @@ namespace
         float esperada = 60;
 
           // Assert - valide los resultados
-        EXPECT_EQ(esperada, actual);
+        EXPECT_FLOAT_EQ(esperada, actual);
      }
 
      
